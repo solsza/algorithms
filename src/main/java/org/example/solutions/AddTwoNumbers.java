@@ -1,6 +1,6 @@
 package org.example.solutions;
 
-public class AddTwoNumbers {
+public class AddTwoNumbers implements DefaultSolution {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
@@ -28,7 +28,7 @@ public class AddTwoNumbers {
         return result;
     }
 
-    public ListNode runDefaultExample() {
+    public void runDefaultExample() {
         // 9 -> 9 -> 9 -> 9 -> 9 -> 9 -> 9
         ListNode l1_6 = new ListNode(9);
         ListNode l1_5 = new ListNode(9, l1_6);
@@ -41,8 +41,8 @@ public class AddTwoNumbers {
         ListNode l2_3 = new ListNode(9);
         ListNode l2_2 = new ListNode(9, l2_3);
         ListNode l2_1 = new ListNode(9, l2_2);
-        ListNode l2 = new ListNode(9,l2_1);
-        return addTwoNumbers(l1, l2);
+        ListNode l2 = new ListNode(9, l2_1);
+        System.out.println(addTwoNumbers(l1, l2));
     }
 
     public static class ListNode {

@@ -3,7 +3,7 @@ package org.example.solutions;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClimbingStairs {
+public class ClimbingStairs implements DefaultSolution {
 
     // n >= 0
 
@@ -36,7 +36,7 @@ public class ClimbingStairs {
 
     }
 
-    public int runDefaultExample() {
-        return climbStairs(3);
+    public void runDefaultExample() {
+        System.out.println(climbStairs(3));
     }
 }

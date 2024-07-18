@@ -1,6 +1,6 @@
 package org.example.solutions;
 
-public class Palindrome {
+public class Palindrome implements DefaultSolution {
 
     public boolean isPalindrome(int x) {
         if (x < 0) {
@@ -44,8 +44,8 @@ public class Palindrome {
         return reverseNumber == x;
     }
 
-    public boolean runDefaultExample() {
-        return isPalindrome(1234821);
+    public void runDefaultExample() {
+        System.out.println(isPalindrome(1234821));
     }
 
 }
