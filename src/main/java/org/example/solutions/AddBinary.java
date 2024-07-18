@@ -1,6 +1,6 @@
 package org.example.solutions;
 
-public class AddBinary {
+public class AddBinary implements DefaultSolution {
 
     public String addBinary(String a, String b) {
         char[] aArray = a.toCharArray();
@@ -24,7 +24,7 @@ public class AddBinary {
     }
 
 
-    public String runDefaultExample() {
-        return addBinary("1010", "1011");
+    public void runDefaultExample() {
+        System.out.println(addBinary("1010", "1011"));
     }
 }
