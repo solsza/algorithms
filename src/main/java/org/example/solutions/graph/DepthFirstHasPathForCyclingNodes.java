@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * assumption: graph does not have cyclic path
  */
-public class BreadthFirstHasPathForCyclingNodes implements DefaultSolution {
+public class DepthFirstHasPathForCyclingNodes implements DefaultSolution {
 
     boolean pathExistsSourceMethode(Map<String, List<String>> graph, String source, String endNode) {
         Set<String> visitedNodes = new HashSet<>();
@@ -36,7 +36,6 @@ public class BreadthFirstHasPathForCyclingNodes implements DefaultSolution {
         graph.put("D", List.of());
         graph.put("E", List.of("B"));
         graph.put("F", List.of("D"));
-        System.out.println("Breadth First has path Example");
         System.out.println(pathExistsSourceMethode(graph, "A", "D"));
     }
 }
