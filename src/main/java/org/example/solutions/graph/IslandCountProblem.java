@@ -20,7 +20,7 @@ public class IslandCountProblem implements DefaultSolution {
         return count;
     }
 
-    public static boolean explore(int r, int c, List<List<String>> grid, HashSet<SimpleEntry<Integer, Integer>> visited) {
+    private boolean explore(int r, int c, List<List<String>> grid, HashSet<SimpleEntry<Integer, Integer>> visited) {
         boolean rowInbounds = r >= 0 && r < grid.size();
         boolean colInbounds = c >= 0 && c < grid.get(0).size();
         if (!rowInbounds || !colInbounds) {
