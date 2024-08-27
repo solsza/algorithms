@@ -1,5 +1,7 @@
 package org.example.solutions;
 
+import static org.example.solutions.Node.printNode;
+
 public class ReverseLinkedList implements DefaultSolution {
 
     private <T> Node<T> reverseList(Node<T> head) {
@@ -39,8 +41,8 @@ public class ReverseLinkedList implements DefaultSolution {
         d.next = e;
         e.next = f;
 
-//        System.out.println(reverseList(a));
-        System.out.println(reverseListRecursive(null, a));
+        printNode(reverseList(a));
+        printNode(reverseListRecursive(null, a));
     }
 }
 

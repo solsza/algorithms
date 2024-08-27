@@ -8,4 +8,11 @@ class Node<T> {
         this.val = val;
         this.next = null;
     }
+
+    public static <T> void printNode(Node<T> node) {
+        while (node != null) {
+            System.out.print(node.val + "\t");
+            node = node.next;
+        }
+    }
 }

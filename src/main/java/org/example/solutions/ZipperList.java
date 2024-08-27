@@ -1,5 +1,7 @@
 package org.example.solutions;
 
+import static org.example.solutions.Node.printNode;
+
 public class ZipperList implements DefaultSolution {
 
     private <T> Node<T> zipperLists(Node<T> head1, Node<T> head2) {
@@ -7,8 +9,8 @@ public class ZipperList implements DefaultSolution {
         Node<T> tail = head;
         Node<T> current1 = head1.next;
         Node<T> current2 = head2;
-
         int count = 0;
+
         while (current1 != null && current2 != null) {
             if (count % 2 == 0) {
                 tail.next = current2;
@@ -65,11 +67,22 @@ public class ZipperList implements DefaultSolution {
         Node<String> z = new Node<>("z");
         x.next = y;
         y.next = z;
+        printNode(zipperLists2(a, x));
 
-        Node<String> stringNode = zipperLists2(a, x);
-        System.out.println(stringNode);
-        Node<String> stringNode1 = zipperLists(a, x);
-        System.out.println(stringNode1);
+        Node<String> a1 = new Node<>("a");
+        Node<String> b1 = new Node<>("b");
+        Node<String> c1 = new Node<>("c");
+        a1.next = b1;
+        b1.next = c1;
+        Node<String> x1 = new Node<>("x");
+        Node<String> y1 = new Node<>("y");
+        Node<String> z1 = new Node<>("z");
+        x1.next = y1;
+        y1.next = z1;
+        Node<String> stringNode = zipperLists(a1, x1);
+        System.out.println();
+        printNode(stringNode);
+
     }
     //                 c1
     //  a -> b -> c -> w -> t -> u

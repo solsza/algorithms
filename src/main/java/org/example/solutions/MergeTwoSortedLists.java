@@ -1,5 +1,7 @@
 package org.example.solutions;
 
+import static org.example.solutions.Node.printNode;
+
 public class MergeTwoSortedLists implements DefaultSolution {
 
     private Node<Integer> mergeLists(Node<Integer> head1, Node<Integer> head2) {
@@ -32,7 +34,32 @@ public class MergeTwoSortedLists implements DefaultSolution {
         if (current2 != null) {
             tail.next = current2;
         }
-        return head.next;
+        return head;
+    }
+
+    private Node<Integer> mergeListWithDummyHead(Node<Integer> head1, Node<Integer> head2) {
+        Node<Integer> dummyHead = new Node<>(0);
+        Node<Integer> tail = dummyHead;
+        Node<Integer> current1 = head1;
+        Node<Integer> current2 = head2;
+        while (current1 != null && current2 != null) {
+            if(current1.val < current2.val) {
+                tail.next = current1;
+                current1 = current1.next;
+            }
+            else {
+                tail.next = current2;
+                current2 = current2.next;
+            }
+            tail = tail.next;
+        }
+        if (current1 != null) {
+            tail.next = current1;
+        }
+        if (current2 != null) {
+            tail.next = current2;
+        }
+        return dummyHead.next;
     }
 
     @Override
@@ -58,6 +85,6 @@ public class MergeTwoSortedLists implements DefaultSolution {
         r.next = s;
         s.next = t;
         // 6 -> 8 -> 9 -> 25
-//        Node<Integer> integerNode = mergeLists(a, q);
+        printNode(mergeLists(a, q));
     }
 }
