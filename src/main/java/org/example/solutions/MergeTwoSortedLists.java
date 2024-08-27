@@ -2,65 +2,62 @@ package org.example.solutions;
 
 public class MergeTwoSortedLists implements DefaultSolution {
 
+    private Node<Integer> mergeLists(Node<Integer> head1, Node<Integer> head2) {
+        Node<Integer> head;
+        Node<Integer> current1 = head1;
+        Node<Integer> current2 = head2;
+        if (head1.val > head2.val) {
+            head = head2;
+            current2 = head2.next;
+        } else {
+            head = head1;
+            current1 = head1.next;
+        }
 
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummy = new ListNode();
-        ListNode cur = dummy;
-
-        while (list1 != null && list2 != null) {
-            if (list1.val > list2.val) {
-                cur.next = list2;
-                list2 = list2.next;
-            } else {
-                cur.next = list1;
-                list1 = list1.next;
+        Node<Integer> tail = head;
+        while (current1 != null && current2 != null) {
+            if(current1.val < current2.val) {
+                tail.next = current1;
+                current1 = current1.next;
             }
-            cur = cur.next;
+            else {
+                tail.next = current2;
+                current2 = current2.next;
+            }
+            tail = tail.next;
         }
-
-        cur.next = (list1 != null) ? list1 : list2;
-
-        return dummy.next;
+        if (current1 != null) {
+            tail.next = current1;
+        }
+        if (current2 != null) {
+            tail.next = current2;
+        }
+        return head.next;
     }
 
+    @Override
     public void runDefaultExample() {
+        Node<Integer> a = new Node<>(5);
+        Node<Integer> b = new Node<>(7);
+        Node<Integer> c = new Node<>(10);
+        Node<Integer> d = new Node<>(12);
+        Node<Integer> e = new Node<>(20);
+        Node<Integer> f = new Node<>(28);
+        a.next = b;
+        b.next = c;
+        c.next = d;
+        d.next = e;
+        e.next = f;
+        // 5 -> 7 -> 10 -> 12 -> 20 -> 28
 
-        //L1 = [1,2,4]
-        ListNode l1_2 = new ListNode(4);
-        ListNode l1_1 = new ListNode(2, l1_2);
-        ListNode l1 = new ListNode(1, l1_1);
-
-        //L2 = [1,3,4]
-        ListNode l2_2 = new ListNode(4);
-        ListNode l2_1 = new ListNode(3, l2_2);
-        ListNode l2 = new ListNode(1, l2_1);
-
-        ListNode listNode = mergeTwoLists(l1, l2);
-        StringBuilder valueToPrint = new StringBuilder();
-        while (listNode.next != null) {
-            valueToPrint.append(listNode.val).append(" ");
-            listNode = listNode.next;
-        }
-        System.out.println(valueToPrint.toString());
-
-
+        Node<Integer> q = new Node<>(6);
+        Node<Integer> r = new Node<>(8);
+        Node<Integer> s = new Node<>(9);
+        Node<Integer> t = new Node<>(25);
+        q.next = r;
+        r.next = s;
+        s.next = t;
+        // 6 -> 8 -> 9 -> 25
+//        Node<Integer> integerNode = mergeLists(a, q);
     }
-
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
 }
