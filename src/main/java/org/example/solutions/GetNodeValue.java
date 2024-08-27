@@ -37,7 +37,7 @@ public class GetNodeValue implements DefaultSolution {
         b.next = c;
         c.next = d;
         System.out.println(getNodeValue(a, 2));
-        System.out.println(getNodeValueRecursive(a, 2,0));
+        System.out.println(getNodeValueRecursive(a, 2, 0));
 
         Node<String> a1 = new Node<>("a");
         Node<String> b1 = new Node<>("b");
@@ -48,7 +48,7 @@ public class GetNodeValue implements DefaultSolution {
         b1.next = c1;
         c1.next = d1;
         System.out.println(getNodeValue(a, 3));
-        System.out.println(getNodeValueRecursive(a, 3,0));
+        System.out.println(getNodeValueRecursive(a, 3, 0));
 
         Node<String> a2 = new Node<>("a");
         Node<String> b2 = new Node<>("b");
@@ -59,7 +59,7 @@ public class GetNodeValue implements DefaultSolution {
         b2.next = c2;
         c2.next = d2;
         System.out.println(getNodeValue(a, 7));
-        System.out.println(getNodeValueRecursive(a, 7,0));
+        System.out.println(getNodeValueRecursive(a, 7, 0));
 
 
     }

@@ -3,7 +3,9 @@ package org.example.solutions;
 public class ReverseString implements DefaultSolution {
 
     public String reverse(String input) {
-        if (input.length() <= 1) return input;
+        if (input.length() <= 1) {
+            return input;
+        }
 
         char[] inputCharArray = input.toCharArray();
         int left = 0;
@@ -26,10 +28,10 @@ public class ReverseString implements DefaultSolution {
     }
 
     private String reverseRecursive(char[] reverseString, String input, int pointer) {
-        if(pointer == input.length()) {
+        if (pointer == input.length()) {
             return String.valueOf(reverseString);
         }
-        reverseString[(input.length() -1) - pointer] = input.charAt(pointer);
+        reverseString[(input.length() - 1) - pointer] = input.charAt(pointer);
         return reverseRecursive(reverseString, input, pointer + 1);
     }
 

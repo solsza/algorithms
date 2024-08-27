@@ -21,7 +21,8 @@ public class FiveSort implements DefaultSolution {
         return array;
     }
 
-    private void swap (List<Integer> array, int i, int j) {}
+    private void swap(List<Integer> array, int i, int j) {
+    }
 
     @Override
     public void runDefaultExample() {

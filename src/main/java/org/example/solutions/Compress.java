@@ -10,7 +10,7 @@ public class Compress implements DefaultSolution {
             if (letter == current) {
                 i += 1;
             } else {
-                update(i,current,result);
+                update(i, current, result);
                 current = letter;
                 i = 1;
             }
@@ -19,10 +19,9 @@ public class Compress implements DefaultSolution {
     }
 
     private StringBuilder update(int i, char current, StringBuilder result) {
-        if(i == 1) {
+        if (i == 1) {
             result.append(current);
-        }
-        else {
+        } else {
             result.append(i).append(current);
         }
         return result;
@@ -34,7 +33,8 @@ public class Compress implements DefaultSolution {
         System.out.println(compress("ssssbbz"));
         System.out.println(compress("ppoppppp"));
         System.out.println(compress("nnneeeeeeeeeeeezz"));
-        System.out.println(compress("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"));
+        System.out.println(
+            compress("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"));
     }
 }
 

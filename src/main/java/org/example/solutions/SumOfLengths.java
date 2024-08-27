@@ -5,11 +5,11 @@ import java.util.List;
 public class SumOfLengths implements DefaultSolution {
 
     private int sumOfLengths(List<String> strings) {
-        return sumElement(strings,0,0);
+        return sumElement(strings, 0, 0);
     }
 
     private int sumElement(List<String> strings, int elementToCalculateIndex, int sum) {
-        if(strings.size() - 1 < elementToCalculateIndex) {
+        if (strings.size() - 1 < elementToCalculateIndex) {
             return sum;
         }
         sum += strings.get(elementToCalculateIndex).length();

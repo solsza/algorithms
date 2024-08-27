@@ -18,7 +18,7 @@ public class ReverseLinkedList implements DefaultSolution {
     }
 
     private <T> Node<T> reverseListRecursive(Node<T> previous, Node<T> head) {
-        if(head == null) {
+        if (head == null) {
             return previous;
         }
         Node<T> next = head.next;

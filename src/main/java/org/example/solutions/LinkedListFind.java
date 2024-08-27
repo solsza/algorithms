@@ -1,11 +1,11 @@
 package org.example.solutions;
 
-public class LinkedListFind implements DefaultSolution{
+public class LinkedListFind implements DefaultSolution {
 
     private <T> boolean linkedListFind(Node<T> head, T target) {
         Node<T> current = head;
         while (current != null) {
-            if(current.val == target) {
+            if (current.val == target) {
                 return true;
             }
             current = current.next;
@@ -17,7 +17,7 @@ public class LinkedListFind implements DefaultSolution{
         if (head == null) {
             return false;
         }
-        if(head.val == target) {
+        if (head.val == target) {
             return true;
         }
         return linkedListFindRecursive(head.next, target);
@@ -34,8 +34,8 @@ public class LinkedListFind implements DefaultSolution{
         a.next = b;
         b.next = c;
         c.next = d;
-        System.out.println(linkedListFind(a,"c"));
-        System.out.println(linkedListFindRecursive(a,"c"));
+        System.out.println(linkedListFind(a, "c"));
+        System.out.println(linkedListFindRecursive(a, "c"));
         System.out.println();
 
         Node<String> a1 = new Node<>("a");
@@ -46,8 +46,8 @@ public class LinkedListFind implements DefaultSolution{
         a1.next = b1;
         b1.next = c1;
         c1.next = d1;
-        System.out.println(linkedListFind(a,"q"));
-        System.out.println(linkedListFindRecursive(a,"q"));
+        System.out.println(linkedListFind(a, "q"));
+        System.out.println(linkedListFindRecursive(a, "q"));
         System.out.println();
 
         Node<Integer> node1 = new Node<>(42);

@@ -8,16 +8,15 @@ public class PairProduct implements DefaultSolution {
 
     private List<Integer> pairProduct(List<Integer> numbers, int target) {
         HashMap<Integer, Integer> visited = new HashMap<>();
-        for(int i = 0; i < numbers.size(); i++) {
+        for (int i = 0; i < numbers.size(); i++) {
             int currentValue = numbers.get(i);
-                if(target % currentValue == 0) {
-                    if(visited.containsKey(currentValue)) {
-                        return List.of(visited.get(currentValue),i);
-                    }
-                    else {
-                        visited.put(target / currentValue, i);
-                    }
+            if (target % currentValue == 0) {
+                if (visited.containsKey(currentValue)) {
+                    return List.of(visited.get(currentValue), i);
+                } else {
+                    visited.put(target / currentValue, i);
                 }
+            }
         }
         return List.of();
     }

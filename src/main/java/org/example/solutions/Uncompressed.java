@@ -9,7 +9,7 @@ public class Uncompressed implements DefaultSolution {
         int j = 0;
         while (j < s.length()) {
             String character = String.valueOf(s.charAt(j));
-            if(numbers.contains(character)) {
+            if (numbers.contains(character)) {
                 j += 1;
             } else {
                 int number = Integer.parseInt(s.substring(i, j));

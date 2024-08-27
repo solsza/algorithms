@@ -6,7 +6,9 @@ import java.util.Map;
 public class FindTheBiggestSum implements DefaultSolution {
 
     public int findTheBiggestSum(int[] A) {
-        if (A.length == 0) return -1;
+        if (A.length == 0) {
+            return -1;
+        }
 
         Map<Integer, Integer> map = new HashMap<>();
         int sum = -1;

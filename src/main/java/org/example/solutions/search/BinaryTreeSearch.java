@@ -1,9 +1,8 @@
 package org.example.solutions.search;
 
-import org.example.solutions.DefaultSolution;
-
 import java.text.MessageFormat;
 import java.util.Optional;
+import org.example.solutions.DefaultSolution;
 
 public class BinaryTreeSearch implements DefaultSolution {
 
@@ -20,6 +19,7 @@ public class BinaryTreeSearch implements DefaultSolution {
     }
 
     class Node {
+
         int value;
         Node left, right;
 
@@ -39,8 +39,8 @@ public class BinaryTreeSearch implements DefaultSolution {
         Node search = search(root, 5);
         if (search != null) {
             System.out.println(MessageFormat.format("Node value : {0} , node left child value {1}, node right child value {2}",
-                    search.value, Optional.ofNullable(search.left).map(node -> node.value).orElse(null),
-                    Optional.ofNullable(search.right).map(node -> node.value).orElse(null)));
+                search.value, Optional.ofNullable(search.left).map(node -> node.value).orElse(null),
+                Optional.ofNullable(search.right).map(node -> node.value).orElse(null)));
         } else {
             System.out.println("Node not found");
         }

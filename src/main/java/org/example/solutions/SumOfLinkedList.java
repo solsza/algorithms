@@ -1,11 +1,11 @@
 package org.example.solutions;
 
-public class SumOfLinkedList implements DefaultSolution{
+public class SumOfLinkedList implements DefaultSolution {
 
     private int sumList(Node<Integer> head) {
         Node<Integer> current = head;
         int sum = 0;
-        while(current != null) {
+        while (current != null) {
             sum += current.val;
             current = current.next;
         }
@@ -13,7 +13,7 @@ public class SumOfLinkedList implements DefaultSolution{
     }
 
     private int sumListRecursive(Node<Integer> head, int sum) {
-        if(head == null) {
+        if (head == null) {
             return sum;
         }
         sum += head.val;
@@ -38,12 +38,12 @@ public class SumOfLinkedList implements DefaultSolution{
         x.next = y;
 
         System.out.println(sumList(a));
-        System.out.println(sumListRecursive(a,0));
+        System.out.println(sumListRecursive(a, 0));
         System.out.println(sumList(x));
-        System.out.println(sumListRecursive(x,0));
+        System.out.println(sumListRecursive(x, 0));
         System.out.println(sumList(null));
-        System.out.println(sumListRecursive(null,0));
+        System.out.println(sumListRecursive(null, 0));
         System.out.println(sumList(new Node<>(100)));
-        System.out.println(sumListRecursive(new Node<>(100),0));
+        System.out.println(sumListRecursive(new Node<>(100), 0));
     }
 }

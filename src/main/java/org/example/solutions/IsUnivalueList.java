@@ -24,8 +24,7 @@ public class IsUnivalueList implements DefaultSolution {
         }
         if (head.val.equals(firstValue)) {
             return isUnivalueListRecursive(head.next, firstValue);
-        }
-        else {
+        } else {
             return false;
         }
     }

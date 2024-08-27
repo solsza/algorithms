@@ -18,11 +18,10 @@ public class MergeTwoSortedLists implements DefaultSolution {
 
         Node<Integer> tail = head;
         while (current1 != null && current2 != null) {
-            if(current1.val < current2.val) {
+            if (current1.val < current2.val) {
                 tail.next = current1;
                 current1 = current1.next;
-            }
-            else {
+            } else {
                 tail.next = current2;
                 current2 = current2.next;
             }
@@ -43,11 +42,10 @@ public class MergeTwoSortedLists implements DefaultSolution {
         Node<Integer> current1 = head1;
         Node<Integer> current2 = head2;
         while (current1 != null && current2 != null) {
-            if(current1.val < current2.val) {
+            if (current1.val < current2.val) {
                 tail.next = current1;
                 current1 = current1.next;
-            }
-            else {
+            } else {
                 tail.next = current2;
                 current2 = current2.next;
             }

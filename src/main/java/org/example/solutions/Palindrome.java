@@ -49,13 +49,13 @@ public class Palindrome implements DefaultSolution {
     }
 
     private boolean palindromeRecursive(char[] s, int leftPointer, int rightPointer) {
-        if(leftPointer >= rightPointer) {
+        if (leftPointer >= rightPointer) {
             return true;
         }
-        if(s[leftPointer] != s[rightPointer]) {
+        if (s[leftPointer] != s[rightPointer]) {
             return false;
         }
-        return palindromeRecursive(s,leftPointer +1, rightPointer - 1);
+        return palindromeRecursive(s, leftPointer + 1, rightPointer - 1);
 
     }
 

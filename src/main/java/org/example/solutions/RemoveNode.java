@@ -51,7 +51,6 @@ public class RemoveNode implements DefaultSolution {
         printNode(removeNode(a, "c"));
         // a -> b -> d -> e -> f
 
-
         Node<String> x = new Node<>("x");
         Node<String> y = new Node<>("y");
         Node<String> z = new Node<>("z");

@@ -1,9 +1,14 @@
 package org.example.solutions.graph;
 
-import org.example.solutions.DefaultSolution;
-
 import java.util.AbstractMap.SimpleEntry;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Queue;
+import org.example.solutions.DefaultSolution;
 
 public class ShortestPath implements DefaultSolution {
 
@@ -54,18 +59,18 @@ public class ShortestPath implements DefaultSolution {
     @Override
     public void runDefaultExample() {
         List<List<String>> edges = List.of(
-                List.of("w", "x"),
-                List.of("x", "y"),
-                List.of("z", "y"),
-                List.of("z", "v"),
-                List.of("w", "v")
+            List.of("w", "x"),
+            List.of("x", "y"),
+            List.of("z", "y"),
+            List.of("z", "v"),
+            List.of("w", "v")
         );
         List<List<String>> edges2 = List.of(
-                List.of("w", "x"),
-                List.of("x", "y"),
-                List.of("z", "y"),
-                List.of("z", "v"),
-                List.of("w", "v")
+            List.of("w", "x"),
+            List.of("x", "y"),
+            List.of("z", "y"),
+            List.of("z", "v"),
+            List.of("w", "v")
         );
         System.out.println("First : " + shortestPath(edges, "w", "z"));
         System.out.println("Second : " + shortestPath(edges2, "y", "x"));

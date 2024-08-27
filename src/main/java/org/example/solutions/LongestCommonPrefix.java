@@ -20,6 +20,6 @@ public class LongestCommonPrefix implements DefaultSolution {
     }
 
     public void runDefaultExample() {
-        System.out.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
+        System.out.println(longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
     }
 }

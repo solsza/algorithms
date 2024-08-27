@@ -2,18 +2,18 @@ package org.example.solutions;
 
 import java.util.List;
 
-public class SumNumbersRecursive implements DefaultSolution{
+public class SumNumbersRecursive implements DefaultSolution {
 
-    private int sumNumbersRecursive (List<Integer> elements) {
+    private int sumNumbersRecursive(List<Integer> elements) {
         return sumElementsRecursive(elements, 0, 0);
     }
 
     private int sumElementsRecursive(List<Integer> elements, int pointer, int sum) {
-        if(pointer > elements.size() - 1) {
+        if (pointer > elements.size() - 1) {
             return sum;
         }
         sum += elements.get(pointer);
-        pointer ++;
+        pointer++;
         return sumElementsRecursive(elements, pointer, sum);
     }
 
