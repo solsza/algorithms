@@ -73,7 +73,9 @@ public class ValidParentheses implements DefaultSolution {
     }
 
     public boolean isValidThirdSolution(String s) {
-        if (s.length() % 2 == 1) return false;
+        if (s.length() % 2 == 1) {
+            return false;
+        }
         char[] sCharArray = s.toCharArray();
         int[] expectedValues = new int[s.length()];
         int pointer = -1;
@@ -89,10 +91,9 @@ public class ValidParentheses implements DefaultSolution {
                 pointer++;
                 expectedValues[pointer] = sCharArray[i] + 2;
             } else {
-                if(pointer == -1){
+                if (pointer == -1) {
                     return false;
-                }
-                else if (expectedValues[pointer] != sCharArray[i]) {
+                } else if (expectedValues[pointer] != sCharArray[i]) {
                     return false;
                 }
                 pointer--;

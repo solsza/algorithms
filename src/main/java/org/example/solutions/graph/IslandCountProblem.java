@@ -1,9 +1,9 @@
 package org.example.solutions.graph;
 
-import org.example.solutions.DefaultSolution;
-
-import java.util.*;
 import java.util.AbstractMap.SimpleEntry;
+import java.util.HashSet;
+import java.util.List;
+import org.example.solutions.DefaultSolution;
 
 public class IslandCountProblem implements DefaultSolution {
 
@@ -12,7 +12,7 @@ public class IslandCountProblem implements DefaultSolution {
         int count = 0;
         for (int r = 0; r < grid.size(); r += 1) {
             for (int c = 0; c < grid.get(0).size(); c += 1) {
-                if(explore(r, c, grid, visited)) {
+                if (explore(r, c, grid, visited)) {
                     count += 1;
                 }
             }
@@ -48,20 +48,20 @@ public class IslandCountProblem implements DefaultSolution {
     @Override
     public void runDefaultExample() {
         List<List<String>> grid = List.of(
-                List.of("W", "L", "W", "W", "W"),
-                List.of("W", "L", "W", "W", "W"),
-                List.of("W", "W", "W", "L", "W"),
-                List.of("W", "W", "L", "L", "W"),
-                List.of("L", "W", "W", "L", "L"),
-                List.of("L", "L", "W", "W", "W")
+            List.of("W", "L", "W", "W", "W"),
+            List.of("W", "L", "W", "W", "W"),
+            List.of("W", "W", "W", "L", "W"),
+            List.of("W", "W", "L", "L", "W"),
+            List.of("L", "W", "W", "L", "L"),
+            List.of("L", "L", "W", "W", "W")
         );
 
         List<List<String>> grid1 = List.of(
-                List.of("L", "W", "W", "L", "W"),
-                List.of("L", "W", "W", "L", "L"),
-                List.of("W", "L", "W", "L", "W"),
-                List.of("W", "W", "W", "W", "W"),
-                List.of("W", "W", "L", "L", "L")
+            List.of("L", "W", "W", "L", "W"),
+            List.of("L", "W", "W", "L", "L"),
+            List.of("W", "L", "W", "L", "W"),
+            List.of("W", "W", "W", "W", "W"),
+            List.of("W", "W", "L", "L", "L")
         );
 
         System.out.println(islandCount(grid));

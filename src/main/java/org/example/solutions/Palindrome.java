@@ -44,8 +44,28 @@ public class Palindrome implements DefaultSolution {
         return reverseNumber == x;
     }
 
+    private boolean palindrome2(String s) {
+        return palindromeRecursive(s.toCharArray(), 0, s.length() - 1);
+    }
+
+    private boolean palindromeRecursive(char[] s, int leftPointer, int rightPointer) {
+        if (leftPointer >= rightPointer) {
+            return true;
+        }
+        if (s[leftPointer] != s[rightPointer]) {
+            return false;
+        }
+        return palindromeRecursive(s, leftPointer + 1, rightPointer - 1);
+
+    }
+
     public void runDefaultExample() {
         System.out.println(isPalindrome(1234821));
+        System.out.println(palindrome2("pop"));
+        System.out.println(palindrome2("kayak"));
+        System.out.println(palindrome2("pops"));
+        System.out.println(palindrome2("boot"));
+        System.out.println(palindrome2("rotator"));
     }
 
 }

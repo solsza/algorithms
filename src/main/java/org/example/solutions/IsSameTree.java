@@ -10,7 +10,7 @@ public class IsSameTree implements DefaultSolution {
         queue.offer(p);
         queue.offer(q);
 
-        while (!queue.isEmpty() && queue.peek() != q ) {
+        while (!queue.isEmpty() && queue.peek() != q) {
             TreeNode node1 = queue.poll();
             TreeNode node2 = queue.poll();
 
@@ -49,6 +49,7 @@ public class IsSameTree implements DefaultSolution {
 
 
     public class TreeNode {
+
         int val;
         TreeNode left;
         TreeNode right;

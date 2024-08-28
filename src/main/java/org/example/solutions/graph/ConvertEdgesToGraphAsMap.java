@@ -1,11 +1,10 @@
 package org.example.solutions.graph;
 
-import org.example.solutions.DefaultSolution;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.example.solutions.DefaultSolution;
 
 public class ConvertEdgesToGraphAsMap implements DefaultSolution {
 

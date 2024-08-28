@@ -1,8 +1,11 @@
 package org.example.solutions.graph;
 
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Queue;
 import org.example.solutions.DefaultSolution;
-
-import java.util.*;
 
 public class BreadthFirstHasPath implements DefaultSolution {
 
@@ -13,7 +16,7 @@ public class BreadthFirstHasPath implements DefaultSolution {
 
         while (!queue.isEmpty()) {
             startNode = queue.poll();
-            if(startNode.equals(endNode)) {
+            if (startNode.equals(endNode)) {
                 return true;
             }
             for (String neighbor : graph.get(startNode)) {

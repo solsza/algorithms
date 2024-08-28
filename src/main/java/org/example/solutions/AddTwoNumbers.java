@@ -46,6 +46,7 @@ public class AddTwoNumbers implements DefaultSolution {
     }
 
     public static class ListNode {
+
         int val;
         ListNode next;
 

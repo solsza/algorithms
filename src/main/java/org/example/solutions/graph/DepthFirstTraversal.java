@@ -1,8 +1,12 @@
 package org.example.solutions.graph;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
 import org.example.solutions.DefaultSolution;
-
-import java.util.*;
 
 public class DepthFirstTraversal implements DefaultSolution {
 
@@ -12,7 +16,7 @@ public class DepthFirstTraversal implements DefaultSolution {
         stack.push(source);
         while (!stack.isEmpty()) {
             String current = stack.pop();
-            if(!path.contains(current)) {
+            if (!path.contains(current)) {
                 path.add(current);
             }
             List<String> neighbors = graph.get(current);
@@ -28,15 +32,15 @@ public class DepthFirstTraversal implements DefaultSolution {
         List<String> values = new ArrayList<>();
         stack.push(source);
         values.add(source);
-        return recursiveOne(graph,values, stack);
+        return recursiveOne(graph, values, stack);
     }
 
     private String recursiveOne(Map<String, List<String>> graph, List<String> currentValues, Stack<String> stack) {
-        if(stack.isEmpty()) {
+        if (stack.isEmpty()) {
             return Arrays.toString(currentValues.toArray());
         }
         String current = stack.pop();
-        if(!currentValues.contains(current)) {
+        if (!currentValues.contains(current)) {
             currentValues.add(current);
         }
         for (String neighbor : graph.get(current)) {

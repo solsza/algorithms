@@ -1,8 +1,11 @@
 package org.example.solutions.graph;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import org.example.solutions.DefaultSolution;
-
-import java.util.*;
 
 public class CalculateConnectedComponents implements DefaultSolution {
 
@@ -18,7 +21,9 @@ public class CalculateConnectedComponents implements DefaultSolution {
     }
 
     private boolean explore(Map<String, List<String>> graph, String sourceNode, Set<String> visitedNode) {
-        if (visitedNode.contains(sourceNode)) return false;
+        if (visitedNode.contains(sourceNode)) {
+            return false;
+        }
         visitedNode.add(sourceNode);
         for (String neighbor : graph.get(sourceNode)) {
             explore(graph, neighbor, visitedNode);

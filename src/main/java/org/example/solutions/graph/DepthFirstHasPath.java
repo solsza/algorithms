@@ -1,11 +1,10 @@
 package org.example.solutions.graph;
 
-import org.example.solutions.DefaultSolution;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import org.example.solutions.DefaultSolution;
 
 /**
  * assumption: graph does not have cyclic path
@@ -13,7 +12,9 @@ import java.util.Objects;
 public class DepthFirstHasPath implements DefaultSolution {
 
     boolean pathExists(Map<String, List<String>> graph, String source, String endNode) {
-        if (Objects.equals(source, endNode)) return true;
+        if (Objects.equals(source, endNode)) {
+            return true;
+        }
         for (String node : graph.get(source)) {
             if (pathExists(graph, node, endNode)) {
                 return true;

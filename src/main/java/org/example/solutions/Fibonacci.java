@@ -3,7 +3,7 @@ package org.example.solutions;
 public class Fibonacci implements DefaultSolution {
 
     long getNElementRecursive(int n) {
-        if(n == 0 || n == 1) {
+        if (n == 0 || n == 1) {
             return n;
         }
         return getNElementRecursive(n - 1) + getNElementRecursive(n - 2);

@@ -1,9 +1,8 @@
 package org.example.solutions.sorts;
 
-import org.example.solutions.DefaultSolution;
-
 import java.util.Arrays;
 import java.util.Random;
+import org.example.solutions.DefaultSolution;
 
 public class SelectionSort implements DefaultSolution {
 

@@ -26,7 +26,7 @@ public class BinarySearch implements DefaultSolution {
 
     @Override
     public void runDefaultExample() {
-        int[] array = {1,4,5,8,10,12,14};
+        int[] array = {1, 4, 5, 8, 10, 12, 14};
         System.out.println(binarySearch(array, 8));
     }
 }
