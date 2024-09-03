@@ -1,6 +1,6 @@
 package org.example.solutions;
 
-class Node<T> {
+public class Node<T> {
 
     T val;
     Node<T> next;
