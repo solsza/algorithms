@@ -10,19 +10,13 @@ public class DecompressBraces implements DefaultSolution {
         String numbers = "123456789";
         Stack<String> stack = new Stack<>();
         for (char ch : str.toCharArray()) {
-            if (numbers.indexOf(ch) > -1) {
-                stack.push(String.valueOf(ch));
+            if (ch != '}') {
+                if (ch != '{') stack.push(String.valueOf(ch));
             } else {
-                if (ch == '}') {
-                    StringBuilder segment = new StringBuilder();
-                    while (!numbers.contains(stack.peek())) {
-                        segment.insert(0, stack.pop());
-                    }
-                    int number = Integer.parseInt(stack.pop());
-                    stack.push(segment.toString().repeat(number));
-                } else if (ch != '{') {
-                    stack.push(String.valueOf(ch));
-                }
+                StringBuilder segment = new StringBuilder();
+                while (!numbers.contains(stack.peek())) segment.insert(0,stack.pop());
+                int number = Integer.parseInt(stack.pop());
+                stack.push(segment.toString().repeat(number));
             }
         }
         return String.join("", stack);

@@ -14,6 +14,7 @@ public class BefittingBrackets implements DefaultSolution {
                 '[', ']'
         );
         Stack<Character> stack = new Stack<>();
+
         for (char c : str.toCharArray()) {
             if (brackets.containsKey(c)) {
                 stack.push(brackets.get(c));
