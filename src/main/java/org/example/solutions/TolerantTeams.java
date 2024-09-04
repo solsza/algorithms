@@ -17,7 +17,7 @@ public class TolerantTeams implements DefaultSolution{
     }
 
 
-    public static boolean traverse(Map<String, List<String>> graph, String node, Map<String, Boolean> visited, boolean currentValue) {
+    private boolean traverse(Map<String, List<String>> graph, String node, Map<String, Boolean> visited, boolean currentValue) {
         if (visited.containsKey(node)) {
             return visited.get(node) == currentValue;
         }
