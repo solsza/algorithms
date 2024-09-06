@@ -1,8 +1,7 @@
-package org.example;
+package org.example.solutions;
 
 import java.util.HashMap;
 import java.util.List;
-import org.example.solutions.DefaultSolution;
 
 public class BreakingBoundaries implements DefaultSolution {
 
