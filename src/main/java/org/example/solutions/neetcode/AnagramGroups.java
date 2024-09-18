@@ -1,4 +1,6 @@
-package org.example.solutions;
+package org.example.solutions.neetcode;
+
+import org.example.solutions.DefaultSolution;
 
 import java.util.*;
 
