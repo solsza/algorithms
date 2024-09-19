@@ -36,6 +36,7 @@ public class TopKFrequent implements DefaultSolution {
 
     @Override
     public void runDefaultExample() {
-
+        int[] strs = new int[]{1, 2, 2, 3, 3, 3};
+        topKFrequent(strs, 2);
     }
 }
