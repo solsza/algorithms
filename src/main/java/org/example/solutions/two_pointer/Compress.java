@@ -1,4 +1,6 @@
-package org.example.solutions;
+package org.example.solutions.two_pointer;
+
+import org.example.solutions.DefaultSolution;
 
 public class Compress implements DefaultSolution {
 

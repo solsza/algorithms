@@ -1,8 +1,9 @@
-package org.example.solutions;
+package org.example.solutions.two_pointer;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.example.solutions.DefaultSolution;
 
 public class FiveSort implements DefaultSolution {
 
