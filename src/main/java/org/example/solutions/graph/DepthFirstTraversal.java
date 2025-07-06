@@ -27,6 +27,14 @@ public class DepthFirstTraversal implements DefaultSolution {
         return Arrays.toString(path.toArray());
     }
 
+    //this is correct option
+    public void depthFirstRecursive(Map<String, List<String>> graph, String source) {
+        System.out.println(source);
+        for (String node : graph.get(source)) {
+            depthFirstRecursive(graph, node);
+        }
+    }
+
     public String depthFirstTraversalRecursive(Map<String, List<String>> graph, String source) {
         Stack<String> stack = new Stack<>();
         List<String> values = new ArrayList<>();
